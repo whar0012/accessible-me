@@ -14,6 +14,12 @@
 
 <body>
   <div class="container">
+    <ul class="skiplinks">
+      <li> <a href="main-nav-skip">Skip to Navigation</a></li>
+      <li> <a href="main-content-skip">Skip to Main Content</a></li>
+      <li> <a href="contact-section-skip"></a>Skip to Contact</li>
+    </ul>
+    <header>
     <div class="site-header">
       <h1>Jam Box Studios</h1>
       <div class="main-nav">
@@ -24,26 +30,30 @@
           <li><a href="#">Studio</a></li>
         </ul>
       </div>
+    </header>
+    <!-- idk where this image goes -->
       <img src="https://placekitten.com/1200/900" class="banner">
     </div>
+    <main>
     <div class="main-content">
       <h1>Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       <div class="owner">
         <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+        <ul itemscope itemtype="https://schema.org/Person">
+          <li itemprop="givenName">Name: John Doe</li>
+          <li itemprop="jobTitle">Title: CEO</li>
+          <li itemprop="email">Email: johnjoe@jambox.ca</li>
+          <li itemprop="telephone">Phone: 613-000-0000</li>
         </ul>
         <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
+        <p itemprop="address" itemscope itemtype="https://schema.org/Place">
+          
+          <span itemprop="brand">Jambox Studios</span>
+          <span itemprop="streetAddress">123 Guitar Road,</span>
+          <span itemprop="adressRegion">Musicville, Danceistan</span>
+          <span itemprop="postalCode">B3T 0L0</span>
         </p>
       </div>
       <div class="contact-section">
@@ -59,10 +69,14 @@
         </form>
       </div>
     </div>
+  </main>
+
+  <footer>
     <div class="site-footer">
       &copy; 2021 Jam Box Studios
     </div>
   </div>
+</footer>
 </body>
 
 </html>
